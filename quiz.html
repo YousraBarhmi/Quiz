@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Quiz</title>
+</head>
+<style>
+    body
+    {
+        background-color: #467;
+    }
+
+     #title 
+    {
+        text-align: center;
+        border: double;
+        margin: 10px 30%;
+    }
+    #corps 
+    { 
+        margin: 0 10%;
+        padding: 2%;
+        background-color: whitesmoke;
+        border: 1px solid black;
+        border-radius: 3%;
+    }
+    .test .type
+    {
+        margin: 4% 1%;
+        padding: 2%;
+        background-color: #467;
+        color: whitesmoke;
+    }
+    .test .type:hover
+    {
+        color: gray;
+        box-shadow: 2px 3px rgba(0, 0, 0, 0.3);
+    }
+    #valider 
+     {
+        margin: 0 40%;
+        background-color: whitesmoke;
+        color: #467;
+        border: 1px solid #467;
+        width: 15%;
+        height: 40px;
+     }
+     #valider:hover , .help:hover
+     {
+        background-color: #467;
+        color: whitesmoke;
+     }
+     .bolder , .quest div p
+     {
+        font-weight: bolder;
+     }
+     .quest div , .Htmlquest div , .Cssquest div
+     {
+        text-align: justify;
+        margin: 5%;
+        padding: 0 2% 3%;
+        border: 1px solid;
+     }
+
+</style>
+<body>
+    <div id="title">
+        <h1>QUIZ</h1>
+    </div>
+    <div id="corps">
+        <div class="istruction" style="border: 1px solid; padding: 1%;">
+            <h3 style="font-style: italic;">Instructions :</h3>
+            <p>-Ce test contient 30 questions en HTML, CSS et JAVASCRIPT, pour chaque question cochez la bonne reponse</p>
+            <p>-Pour valider le test, il faut repondre au moins à sept questions pour chaque categorie, sinon la note ne sera pas calculer (le score sur 30 points)</p>
+            <p>-Si vous affichez la solution , votre reponsesera compter fausse</p>
+        </div>
+        <div class="test">
+            <form id="quiz-form">
+                <div>
+                    <p id="html" class="type bolder "><span class="glyphicon">&#xe072;</span> HTML</p>
+                    <div id="Htmlquestions" class="Htmlquest" style="display: none;">
+                        <div class="hq1 a" >
+                            <h2>Question 1</h2>
+                            <p>What does HTML stand for?</p>
+                            <input type="radio" name="q1" value="a"> a- Hyper Text Markup Language<br>
+                            <input type="radio" name="q1" value="b"> b- Hyperlinks and Text Markup Language<br>
+                            <input type="radio" name="q1" value="c"> c- Home Tool Markup Language<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+                        <div class="hq2 b">
+                            <h2>Question 2</h2>
+                            <p>Which HTML tag is used to create a hyperlink?</p>
+                            <input type="radio" name="q2" value="a"> a- &lt;link&gt;<br>
+                            <input type="radio" name="q2" value="b"> b- &lt;a&gt;<br>
+                            <input type="radio" name="q2" value="c"> c- &lt;hyperlink&gt;<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+
+                        <div class="hq3 a">
+                            <h2>Question 3</h2>
+                            <p>Which HTML element defines the structure of an HTML document?</p>
+                            <input type="radio" name="q3" value="a"> a- &lt;html&gt;<br>
+                            <input type="radio" name="q3" value="b"> b- &lt;head&gt;<br>
+                            <input type="radio" name="q3" value="c"> c- &lt;body&gt;<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+
+                        <div class="hq4 c">
+                            <h2>Question 4</h2>
+                            <p>Which HTML tag is used to create an unordered list?</p>
+                            <input type="radio" name="q4" value="a"> a- &lt;ol&gt;<br>
+                            <input type="radio" name="q4" value="b"> b- &lt;li&gt;<br>
+                            <input type="radio" name="q4" value="c"> c- &lt;ul&gt;<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+
+                        <div class="hq5 b">
+                            <h2>Question 5</h2>
+                            <p>What is the purpose of the HTML <span class="bolder"> &lt;head&gt; </span> element?</p>
+                            <input type="radio" name="q5" value="a"> a-  It defines the main content of the document.<br>
+                            <input type="radio" name="q5" value="b"> b-  It contains metadata about the document, such as the title and links to stylesheets.<br>
+                            <input type="radio" name="q5" value="c"> c- It defines a section of text in the document.<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+
+                        <div class="hq6 a">
+                            <h2>Question 6</h2>
+                            <p>Which HTML tag is used to create an ordered list?</p>
+                            <input type="radio" name="q6" value="a"> a- &lt;ol&gt;<br>
+                            <input type="radio" name="q6" value="b"> b- &lt;li&gt;<br>
+                            <input type="radio" name="q6" value="c"> c- &lt;ul&gt;<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+                        <div class="hq7 b">
+                            <h2>Question 7</h2>
+                            <p>What is the purpose of the HTML <span class="bolder"> &lt;iframe&gt;  </span>  element, and how is it commonly used in web development?</p>
+                            <input type="radio" name="q7" value="a"> a- The <span class="bolder"> &lt;iframe&gt;  </span> element is used for creating responsive layouts in HTML documents.<br>
+                            <input type="radio" name="q7" value="b"> b- The <span class="bolder"> &lt;iframe&gt;  </span>  element is used for embedding external web content within a web page, such as videos, maps, or other websites.<br>
+                            <input type="radio" name="q7" value="c"> c- The <span class="bolder"> &lt;iframe&gt;  </span>  element is used for defining internal links within a webpage.<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+
+                        <div class="hq8 b">
+                            <h2>Question 8</h2>
+                            <p>What is the difference between the <span class="bolder"> &lt;div&gt; </span> and <span class="bolder"> &lt;span&gt; </span>   elements in HTML, and provide a scenario where you might use each?</p>
+                            <input type="radio" name="q8" value="a"> a- <span class="bolder"> &lt;div&gt; </span> is used for inline elements, and <span class="bolder"> &lt;span&gt; </span> is used for block-level elements.<br>
+                            <input type="radio" name="q8" value="b"> b- <span class="bolder"> &lt;div&gt; </span>  is a block-level element used to group and style content, while <span class="bolder"> &lt;span&gt; </span> is an inline element used to style a specific portion of text.<br>
+                            <input type="radio" name="q8" value="c"> c- <span class="bolder"> &lt;div&gt; </span>  is used for creating tables, and <span class="bolder"> &lt;span&gt; </span> is used for forms.<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+
+                        <div class="hq9 b">
+                            <h2>Question 9</h2>
+                            <p>How can you make an HTML element completely inaccessible to screen readers?</p>
+                            <input type="radio" name="q9" value="a"> a-  Use <span class="bolder"> aria-label </span> attributes with empty values.<br>
+                            <input type="radio" name="q9" value="b"> b-  Use <span class="bolder"> aria-hidden="true"</span> on the element<br>
+                            <input type="radio" name="q9" value="c"> c- Add a <span class="bolder"> hidden</span> class to the element.<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+
+                        <div class="hq10 c">
+                            <h2>Question 10</h2>
+                            <p>What is the purpose of the HTML <span class="bolder"> &lt;section&gt; </span> element, and how does it differ from the <span class="bolder"> &lt;div&gt; </span> element?</p>
+                            <input type="radio" name="q10" value="a"> a-  The <span class="bolder"> &lt;section&gt; </span> element is used to create a horizontal rule in HTML documents, while <span class="bolder"> &lt;div&gt; </span> is used for layout and styling.<br>
+                            <input type="radio" name="q10" value="b"> b-  The <span class="bolder"> &lt;section&gt; </span> element is used to define a header section of a webpage, while <span class="bolder"> &lt;div&gt; </span> is used for footers.<br>
+                            <input type="radio" name="q10" value="c"> c-  The <span class="bolder"> &lt;section&gt; </span> element is used to define thematic content within a document, and it has semantic meaning, while <span class="bolder"> &lt;div&gt; </span> is a generic container with no inherent semantics.<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div>
+                        <p id="css" class="type bolder "><span class="glyphicon">&#xe072;</span> CSS</p>
+                        <div id="Cssquestions" class="Cssquest" style="display: none;">
+                            <div  class="cq1 c">
+                                <h2>Question 1</h2>
+                                <p>What does CSS stand for?</p>
+                                <input type="radio" name="q1" value="a"> a- Cascading Script Styles<br>
+                                <input type="radio" name="q1" value="b"> b- Computer Style Sheets<br>
+                                <input type="radio" name="q1" value="c"> c- Cascading Style Sheets<br>
+                                <input type="radio" name="q1" value="d"> d- Content Style System<br>
+                                <button class="help" style="margin-top: 10px;">Show</button>
+                            </div>
+                            <div class="cq2 a">
+                                <h2>Question 2</h2>
+                                <p>Which CSS property is used to change the text color of an element?</p>
+                                <input type="radio" name="q2" value="a"> a- color <br>
+                                <input type="radio" name="q2" value="b"> b- text-color<br>
+                                <input type="radio" name="q2" value="c"> c- text-style<br>
+                                <button class="help" style="margin-top: 10px;">Show</button>
+                            </div>
+    
+                            <div class="cq3 b">
+                                <h2>Question 3</h2>
+                                <p>What does the CSS property margin control in relation to an element?</p>
+                                <input type="radio" name="q3" value="a"> a- Element width<br>
+                                <input type="radio" name="q3" value="b"> b- Space around the outside of the element<br>
+                                <input type="radio" name="q3" value="c"> c- Space around the inside of the element<br>
+                                <button class="help" style="margin-top: 10px;">Show</button>
+                            </div>
+    
+                            <div class="cq4 c">
+                                <h2>Question 4</h2>
+                                <p>What is the CSS box-sizing property used for?</p>
+                                <input type="radio" name="q4" value="a"> a-  Defining the shape of a box<br>
+                                <input type="radio" name="q4" value="b"> b-  Controlling the visibility of an element<br>
+                                <input type="radio" name="q4" value="c"> c- Determining how the total width and height of an element is calculated<br>
+                                <button class="help" style="margin-top: 10px;">Show</button>
+                            </div>
+    
+                            <div class="cq5 b">
+                                <h2>Question 5</h2>
+                                <p>In CSS, how do you select all anchor links within a <span class="bolder"> &lt;div&gt; </span> with the class "menu"?  </p>
+                                <input type="radio" name="q5" value="a"> a- .menu > a<br>
+                                <input type="radio" name="q5" value="b"> b- .menu a <br>
+                                <input type="radio" name="q5" value="c"> c- .menu a:link<br>
+                                <button class="help" style="margin-top: 10px;">Show</button>
+                            </div>
+    
+                            <div class="cq6 c">
+                                <h2>Question 6</h2>
+                                <p>What is the purpose of the CSS <span class="bolder">z-index</span>  property?</p>
+                                <input type="radio" name="q6" value="a"> a-  Changing the opacity of an element<br>
+                                <input type="radio" name="q6" value="b"> b- Adjusting the size of an element's font<br>
+                                <input type="radio" name="q6" value="c"> c- Specifying the order in which elements are stacked in the z-axisbr>
+                                <button class="help" style="margin-top: 10px;">Show</button>
+                            </div>
+                            <div class="cq7 a">
+                                <h2>Question 7</h2>
+                                <p>What does the CSS property <span class="bolder"> text-align </span> control?</p>
+                                <input type="radio" name="q7" value="a"> a- The arrangement of text within an element (left, center, right, or justified).<br>
+                                <input type="radio" name="q7" value="b"> b- The spacing between lines of text. <br>
+                                <input type="radio" name="q7" value="c"> c- he font size of text.<br>
+                                <button class="help" style="margin-top: 10px;">Show</button>
+                            </div>
+    
+                            <div class="cq8 b">
+                                <h2>Question 8</h2>
+                                <p>How do you comment out a CSS rule?</p>
+                                <input type="radio" name="q8" value="a"> a- # This is a comment<br>
+                                <input type="radio" name="q8" value="b"> b-/* This is a comment */<br>
+                                <input type="radio" name="q8" value="c"> c- -- This is a comment<br>
+                                <button class="help" style="margin-top: 10px;">Show</button>
+                            </div>
+    
+                            <div class="cq9 b">
+                                <h2>Question 9</h2>
+                                <p>What is the CSS <span class="bolder"> position </span> property used for, and what are the possible values it can take?</p>
+                                <input type="radio" name="q9" value="a"> a- The <span class="bolder"> position </span> property is used to specify the text alignment within an element. Possible values include "left," "right," "center," and "justify."<br>
+                                <input type="radio" name="q9" value="b"> b- The <span class="bolder"> position </span> property is used to control the placement of an element within its containing element. Possible values include "static," "relative," "absolute," and "fixed."<br>
+                                <input type="radio" name="q9" value="c"> c- The <span class="bolder"> position </span> property is used to define the font size of an element. Possible values include "small," "medium," and "large."<br>
+                                <button class="help" style="margin-top: 10px;">Show</button>
+                            </div>
+    
+                            <div class="cq10 a">
+                                <h2>Question 10</h2>
+                                <p>What is the CSS <span class="bolder"> @media </span> rule used for, and how can it be applied in responsive web design? Provide an example of using the @media rule to adjust styles based on screen size.</p>
+                                <input type="radio" name="q10" value="b"> b-  The <span class="bolder"> @media </span> rule is used to define multiple background images for different screen sizes. It allows the selection of the appropriate image based on the screen width.<br>
+                                <input type="radio" name="q10" value="a"> a-  The <span class="bolder"> @media </span> rule is used to target specific media types, such as print or screen, and apply styles accordingly. It is essential for creating responsive web design.<br>
+                                <input type="radio" name="q10" value="c"> c-  The <span class="bolder"> @media </span> rule is used to create animations and transitions in CSS.<br>
+                                <button class="help" style="margin-top: 10px;">Show</button>
+                            </div>
+    
+                        </div>
+                </div>
+                
+                <div >
+                    <p id="js" class="type bolder "><span class="glyphicon">&#xe072;</span> JAVASCRIPT</p>
+                    <div id="Jsquestions" class="quest" style="display: none;">
+                        <div class="jq1 c">
+                            <h2>Question 1</h2>
+                            <p>Is JavaScript an object-oriented language?</p>
+                            <input type="radio" name="q1" value="a"> a- Yes<br>
+                            <input type="radio" name="q1" value="b"> b- No<br>
+                            <input type="radio" name="q1" value="c"> c- It depends<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+                        <div class="jq2 b">
+                            <h2>Question 2</h2>
+                            <p>What is the primary purpose of JavaScript in web development?</p>
+                            <input type="radio" name="q2" value="a"> a-  Creating databases <br>
+                            <input type="radio" name="q2" value="b"> b- Adding interactivity and functionality to web pages<br>
+                            <input type="radio" name="q2" value="c"> c- Designing user interfaces<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+
+                        <div class="jq3 a">
+                            <h2>Question 3</h2>
+                            <p>What is the DOM? </p>
+                            <input type="radio" name="q3" value="a"> a- Document Object Model<br>
+                            <input type="radio" name="q3" value="b"> b- Display Orientation Module<br>
+                            <input type="radio" name="q3" value="c"> c- Data Object Model<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+
+                        <div class="jq4 b">
+                            <h2>Question 4</h2>
+                            <p> What does the textContent property of an element in the DOM represent? </p>
+                            <input type="radio" name="q4" value="a"> a- The value of the element's "class" attribute<br>
+                            <input type="radio" name="q4" value="b"> b- The text content of the element and its descendants <br>
+                            <input type="radio" name="q4" value="c"> c- The element's CSS styles<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+
+                        <div class="jq5 a">
+                            <h2>Question 5</h2>
+                            <p> How can you add a new element to the DOM using JavaScript? </p>
+                            <input type="radio" name="q5" value="a"> a- document.createElement('newElement')<br>
+                            <input type="radio" name="q5" value="b"> b- document.newElement('create') <br>
+                            <input type="radio" name="q5" value="c"> c- document.append('newElement')<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+
+                        <div class="jq6 c">
+                            <h2>Question 6</h2>
+                            <p>What is the purpose of the addEventListener method in JavaScript? </p>
+                            <input type="radio" name="q6" value="a"> a- It is used to create new elements.<br>
+                            <input type="radio" name="q6" value="b"> b- It is used to change an element's CSS styles.<br>
+                            <input type="radio" name="q6" value="c"> c- It is used to add event handlers to DOM elements, allowing you to respond to specific events such as clicks and keypresses.<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+                        <div class="jq7 a">
+                            <h2>Question 7</h2>
+                            <p>Which method is used to remove an element from the DOM using JavaScript? </p>
+                            <input type="radio" name="q7" value="a"> a- element.remove()<br>
+                            <input type="radio" name="q7" value="b"> b- element.removeChild(childElement) <br>
+                            <input type="radio" name="q7" value="c"> c- element.hide()<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+
+                        <div class="jq8 a">
+                            <h2>Question 8</h2>
+                            <p>How do you dynamically modify an element's CSS styles using JavaScript? </p>
+                            <input type="radio" name="q8" value="a"> a- Access the element's  <span class="bolder">style</span>  property and set individual style properties.<br>
+                            <input type="radio" name="q8" value="b"> b- Use the <span class="bolder"> element.setStyles() </span>  method.<br>
+                            <input type="radio" name="q8" value="c"> c- Use the <span class="bolder"> style.update() </span>  method.<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+
+                        <div class="jq9 b">
+                            <h2>Question 9</h2>
+                            <p>How can you make an <spa class="bolder"> HTTP GET </spa>  request in JavaScript to fetch data from a remote server? </p>
+                            <input type="radio" name="q9" value="a"> a- Use the <span class="bolder"> requestGET() </span> function.<br>
+                            <input type="radio" name="q9" value="b"> b- Use the <span class="bolder">fetch() </span>  function or XMLHttpRequest.<br>
+                            <input type="radio" name="q9" value="c"> c- Use the <span class="bolder"> getHTTPData()</span>  method.<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+
+                        <div class="jq10 a">
+                            <h2>Question 10</h2>
+                            <p>What is the purpose of the JavaScript <span class="bolder">async</span> and <span class="bolder">await</span> keywords, and how are they used in asynchronous programming?</p>
+                            <input type="radio" name="q10" value="b"> b- <span class="bolder">async</span> and <span class="bolder">await</span> are used to define asynchronous functions that can be executed in parallel.<br>
+                            <input type="radio" name="q10" value="a"> a- <span class="bolder">async</span> and <span class="bolder">await</span> are used to perform synchronous operations in JavaScript.<br>
+                            <input type="radio" name="q10" value="c"> c- <span class="bolder">async</span> and <span class="bolder">await</span> are used for creating animations and transitions.<br>
+                            <button class="help" style="margin-top: 10px;">Show</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" id="valider" value="Valider">
+                </div>
+            </form>
+            <div id="result"></div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('html').addEventListener('click', () => {
+            const htmlQuestions = document.getElementById('Htmlquestions');
+            const display = htmlQuestions.style.display;
+            
+            if (display === 'block') {
+                htmlQuestions.style.display = 'none'; 
+            } else {
+                htmlQuestions.style.display = 'block'; 
+            }
+        });
+        document.getElementById('css').addEventListener('click', () => {
+            const htmlQuestions = document.getElementById('Cssquestions');
+            const display = htmlQuestions.style.display;
+            
+            if (display === 'block') {
+                htmlQuestions.style.display = 'none'; 
+            } else {
+                htmlQuestions.style.display = 'block'; 
+            }
+        });
+
+
+        document.getElementById('js').addEventListener('click', () => {
+            const htmlQuestions = document.getElementById('Jsquestions');
+            const display = htmlQuestions.style.display;
+            
+            if (display === 'block') {
+                htmlQuestions.style.display = 'none'; 
+            } else {
+                htmlQuestions.style.display = 'block'; 
+            }
+        });
+        document.getElementById('quiz-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            html = document.querySelectorAll('Htmlquest');
+            var Ans = [];
+
+            for (let i = 0; i <= 10; i++) {
+            var Resp = document.getElementsByClassName('hq' + i);
+                if (Resp.length > 0) {
+                    var Elem = Resp[0].className.split(' ');
+                    if (Elem.length > 1) {
+                    Ans.push(Elem[1]);
+                    }
+                }
+            }
+console.log(Ans)
+
+            var AnsCss = [];
+
+            for (let i = 0; i <= 10; i++) {
+            var Resp = document.getElementsByClassName('cq' + i);
+                if (Resp.length > 0) {
+                    var Elem = Resp[0].className.split(' ');
+                    if (Elem.length > 1) {
+                    AnsCss.push(Elem[1]);
+                    }
+                }
+            }
+console.log(AnsCss)
+            var AnsJs = [];
+
+            for (let i = 0; i <= 10; i++) {
+            var Resp = document.getElementsByClassName('jq' + i);
+                if (Resp.length > 0) {
+                    var Elem = Resp[0].className.split(' ');
+                    if (Elem.length > 1) {
+                        AnsJs.push(Elem[1]);
+                    }
+                }
+            }
+console.log(AnsJs)
+
+            let scoreHtml = 0;
+
+            for (const question in Ans) {
+                quest = parseInt(question) + 1;
+                const selectedInput = document.querySelector(`.hq${quest} input[type="radio"]:checked`);
+                const selectedAnswer = selectedInput ? selectedInput.value : null;
+                console.log(selectedAnswer)
+                if (selectedAnswer && selectedAnswer === Ans[question]) {
+                    scoreHtml++;
+                }
+            }
+
+            let scoreCss = 0;
+
+            for (const question in AnsCss) {
+                quest = parseInt(question) + 1;
+                const selectedInput = document.querySelector(`.cq${quest} input[type="radio"]:checked`);
+                const selectedAnswer = selectedInput ? selectedInput.value : null;
+                if (selectedAnswer && selectedAnswer === AnsCss[question]) {
+                    scoreCss++;
+                }
+            }
+
+            let scoreJs = 0;
+
+            for (const question in AnsJs) {
+                quest = parseInt(question) + 1;
+                const selectedInput = document.querySelector(`.jq${quest} input[type="radio"]:checked`);
+                const selectedAnswer = selectedInput ? selectedInput.value : null;
+                if (selectedAnswer && selectedAnswer === AnsJs[question]) {
+                    scoreJs++;
+                }
+                console.log(scoreCss + 'et' + scoreJs)
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `You scored ${scoreHtml + scoreCss + scoreJs} out of 30. <br> `;
+                                    
+        });
+    </script>
+
+</body>
+</html>
